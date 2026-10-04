@@ -1,42 +1,54 @@
 var musicNameList = [
-    {
-        id: 0,
-        name: "M'AMA NON M'AMA - Madame"
-    },
-    {
-        id: 1,
-        name: "PUTTANA SVIZZERA - Madame"
-    },
-    {
-        id: 2,
-        name: "LA PERSONA PEGGIORE DEL MONDO - Madame"
-    },
-    {
-        id: 3,
-        name: "ALLUCINAZIONI - Madame"
-    },
-    {
-        id: 4,
-        name: "COME STAI? - Madame"
-    },
-    {
-        id: 5,
-        name: "MAI PIÙ - Madame"
-    },
-    {
-        id: 6,
-        name: "NO PRESSURE - Madame"
-    },
-    {
-        id: 7,
-        name: "NON MI TRADIRE - Madame"
-    },
-    {
-        id: 8,
-        name: "BESTIA - Madame"
-    },
-    {
-        id: 9,
-        name: "GRAZIE - Madame"
-    }
+    { id: 0, name: "M'AMA NON M'AMA - Madame" },
+    { id: 1, name: "PUTTANA SVIZZERA - Madame" },
+    { id: 2, name: "LA PERSONA PEGGIORE DEL MONDO - Madame" },
+    { id: 3, name: "ALLUCINAZIONI - Madame" },
+    { id: 4, name: "COME STAI? - Madame" },
+    { id: 5, name: "MAI PIÙ - Madame" },
+    { id: 6, name: "NO PRESSURE - Madame" },
+    { id: 7, name: "NON MI TRADIRE - Madame" },
+    { id: 8, name: "BESTIA - Madame" },
+    { id: 9, name: "GRAZIE - Madame" },
+    { id: 10, name: "INVIDIOSA - Madame" },
+    { id: 11, name: "ROSSO COME IL FANGO - Madame" },
+    { id: 12, name: "OK - Madame" },
+    { id: 13, name: "DISINCANTO - Madame" },
+    { id: 14, name: "ANNA - Madame" },
+    { id: 15, name: "QUANTO FORTE TI PENSAVO - Madame" },
+    { id: 16, name: "PER IL TUO BENE - Madame" },
+    { id: 17, name: "IL MIO NUOVO MAESTRO - Madame" },
+    { id: 18, name: "SE NON PROVO DOLORE - Madame" },
+    { id: 19, name: "RESPIRARE - Madame" },
+    { id: 20, name: "TEKNO POKÈ - Madame" },
+    { id: 21, name: "MILAGRO - Madame" },
+    { id: 22, name: "DONNA VEDI - Madame" },
+    { id: 23, name: "NIMPHA - Madame" },
+    { id: 24, name: "COME VOGLIO L'AMORE - Madame" },
+    { id: 25, name: "AVATAR - Madame" },
+    { id: 26, name: "L'ONDA - Madame" },
+    { id: 27, name: "LA FESTA DELLA CRUDA VERITÀ - Madame" },
+    { id: 28, name: "ARANCIATA - Madame" },
+    { id: 29, name: "IL BENE NEL MALE - Madame" },
+    { id: 30, name: "L'ECCEZIONE - Madame" },
+    { id: 31, name: "MAREA - Madame" },
+    { id: 32, name: "TU MI HAI CAPITO - Madame" },
+    { id: 33, name: "MOOD - Madame" },
+    { id: 34, name: "LUNA - Madame" },
+    { id: 35, name: "BABAGANOUSH - Madame" },
+    { id: 36, name: "DIMMI ORA - Madame" },
+    { id: 37, name: "BUGIE - Madame" },
+    { id: 38, name: "TUTTI MUOIONO - Madame" },
+    { id: 39, name: "MAMI PAPI - Madame" },
+    { id: 40, name: "VERGOGNA - Madame" },
+    { id: 41, name: "BAMBOLINE BOLIVIANE - Madame" },
+    { id: 42, name: "AMICONI - Madame" },
+    { id: 43, name: "ISTINTO - Madame" },
+    { id: 44, name: "VOCE - Madame" },
+    { id: 45, name: "IL MIO AMICO - Madame" },
+    { id: 46, name: "CLITO - Madame" },
+    { id: 47, name: "SENTIMI - Madame" },
+    { id: 48, name: "BABY - Madame" },
+    { id: 49, name: "LA PROMESSA DELL'ANNO - Madame" },
+    { id: 50, name: "17 - Madame" },
+    { id: 51, name: "SCICCHERIE - Madame" }
 ];
