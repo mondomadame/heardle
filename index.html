@@ -37,8 +37,8 @@
     <link rel="manifest" href="webmanifest.json" />
     <!-- VERSIONE: quando cambi un file, aumenta il numero dopo ?v= qui sotto
          (e in fondo alla pagina), cosi' i browser scaricano la versione nuova. -->
-    <link rel="stylesheet" href="global.css?v=2" />
-    <link rel="stylesheet" href="bundle.css?v=2" />
+    <link rel="stylesheet" href="global.css?v=3" />
+    <link rel="stylesheet" href="bundle.css?v=3" />
     <style>
       #mh-gate {
         position: fixed;
@@ -111,14 +111,14 @@
         <p class="mh-small">
           Sito fan indipendente, non affiliato a Madame né a Sugar Music.
           Nessuna iscrizione, nessun tracciamento: punteggi e scelte restano
-          nel tuo browser. Contatti: mondomadame@gmail.com
+          nel browser dell'utente. Contatti: mondomadame@gmail.com
         </p>
       </div>
     </div>
     <noscript>Per giocare a Madame Heardle serve JavaScript attivo.</noscript>
 
-    <script src="music-list.js?v=2"></script>
-    <script src="music-links.js?v=2"></script>
+    <script src="music-list.js?v=3"></script>
+    <script src="music-links.js?v=3"></script>
     <script>
       // Il gioco (e con lui il lettore SoundCloud) parte solo dopo il clic su "Gioca".
       // La scelta viene ricordata nel browser del visitatore.
@@ -135,7 +135,7 @@
         function avvia() {
           gate.hidden = true;
           var s = document.createElement("script");
-          s.src = "main.js?v=2";
+          s.src = "main.js?v=3";
           document.body.appendChild(s);
         }
         if (ricordata()) {
