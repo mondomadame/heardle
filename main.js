@@ -1,6 +1,6 @@
 var app = (function () {
-  var artist = "Etrian Odyssey";
-  var startDate = "2022-07-31"; // Original Start Date, used to know the current heardle
+  var artist = "Madame";
+  var startDate = "2026-10-04"; // Original Start Date, used to know the current heardle
   var seed = 565099537; // seed used for rng to select today's music
 
   // musicNameList and musicListWithLinks are defined in music-list.js and music-links.js
@@ -421,31 +421,31 @@ var app = (function () {
     // I didn't find how to reuse the names of the popup
     switch (i[0].name) {
       case "ge":
-        aria = "About";
+        aria = "Informazioni";
         break;
       case "ye":
-        aria = "Support";
+        aria = "Contatti";
         break;
       case "ve":
-        aria = "Stats";
+        aria = "Statistiche";
         break;
       case "we":
-        aria = "How to play";
+        aria = "Come si gioca";
         break;
       case "mListIco":
-        aria = "Music List";
+        aria = "Elenco canzoni";
         break;
       case "Mt":
-        aria = "Skip";
+        aria = "Salta";
         break;
       case "$t":
-        aria = "Submit";
+        aria = "Invia";
         break;
       case "ht":
         aria = "Play/Pause";
         break;
       case "dn":
-        aria = "Share";
+        aria = "Condividi";
         break;
       case "pn":
         aria = "Play";
@@ -1003,31 +1003,31 @@ var app = (function () {
     return [
       n,
       () => {
-        n("info", "about"),
+        n("info", "informazioni"),
           pe("clickInfo", {
             name: "clickInfo",
           });
       },
       () => {
-        n("donate", "support"),
+        n("donate", "contatti"),
           pe("clickDonate", {
             name: "clickDonate",
           });
       },
       () => {
-        n("results", "stats"),
+        n("results", "statistiche"),
           pe("clickStats", {
             name: "clickStats",
           });
       },
       () => {
-        n("help", "how to play"),
+        n("help", "come si gioca"),
           pe("clickHelp", {
             name: "clickHelp",
           });
       },
       () => {
-        n("music-list", "music list"),
+        n("music-list", "elenco canzoni"),
           pe("clickMusicList", {
             name: "clickMusicList",
           });
@@ -1118,11 +1118,11 @@ var app = (function () {
             n,
             "title",
             (d =
-              "Listen to " +
+              "Ascolta " +
               e[1].artist +
               " - " +
               e[1].title +
-              " on SoundCloud")
+              " su SoundCloud")
           ),
           M(n, "class", "no-underline"),
           M(t, "class", "p-3 pb-0 flex-col items-evenly");
@@ -1157,11 +1157,11 @@ var app = (function () {
           2 & t &&
           d !==
           (d =
-            "Listen to " +
+            "Ascolta " +
             e[1].artist +
             " - " +
             e[1].title +
-            " on SoundCloud") &&
+            " su SoundCloud") &&
           M(n, "title", d);
       },
       d(e) {
@@ -1322,7 +1322,7 @@ var app = (function () {
     return {
       c() {
         (n = w("div")),
-          (n.textContent = "SKIPPED"),
+          (n.textContent = "SALTATO"),
           M(n, "class", "text-custom-mg tracking-widest font-semibold");
       },
       m(e, t) {
@@ -1669,7 +1669,7 @@ var app = (function () {
           Q(n.$$.fragment),
             (r = x()),
             (s = w("p")),
-            (s.textContent = "loading player");
+            (s.textContent = "caricamento del lettore");
         },
         m(e, t) {
           ee(n, e, t), g(e, r, t), g(e, s, t), (i = !0);
@@ -1706,7 +1706,7 @@ var app = (function () {
         c() {
           (t = w("p")),
             (t.textContent =
-              "There was an error loading the player. Please reload and try\n                again."),
+              "Errore nel caricamento del lettore. Ricarica la pagina e riprova."),
             (n = x()),
             (r = w("div")),
             Q(s.$$.fragment),
@@ -2159,11 +2159,11 @@ var app = (function () {
     return {
       c() {
         (t = w("p")),
-          (n = _("We're really sorry. The answer is ")),
+          (n = _("Ci dispiace. La risposta \u00e8 ")),
           (r = w("a")),
-          (s = _("here")),
+          (s = _("qui")),
           (o = _(
-            ", though, if you want to maintain your streak.\n                                We won't tell..."
+            ", se vuoi mantenere la tua serie. Non lo diremo a nessuno..."
           )),
           M(r, "href", (i = e[1].url)),
           M(t, "class", "text-xs text-custom-line pt-1");
@@ -2186,7 +2186,7 @@ var app = (function () {
       c() {
         (t = w("div")),
           (t.innerHTML =
-            '<p>Turn up the volume and tap to start the track!</p> \n\n                <svg class="mt-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>'),
+            '<p>Alza il volume e tocca per far partire il brano!</p> \n\n                <svg class="mt-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>'),
           M(
             t,
             "class",
@@ -3516,7 +3516,7 @@ var app = (function () {
     let n, r;
     return {
       c() {
-        (n = _("Skip ")), (r = w("span")), (r.textContent = "(+1.5s)");
+        (n = _("Salta ")), (r = w("span")), (r.textContent = "(+1.5s)");
       },
       m(e, t) {
         g(e, n, t), g(e, r, t);
@@ -3532,7 +3532,7 @@ var app = (function () {
     let t, n, r, s, i;
     return {
       c() {
-        (t = _("Skip ")),
+        (t = _("Salta ")),
           (n = w("span")),
           (r = _("(+")),
           (s = _(e[0])),
@@ -3582,7 +3582,7 @@ var app = (function () {
     let t;
     return {
       c() {
-        t = _("Submit");
+        t = _("Invia");
       },
       m(e, n) {
         g(e, t, n);
@@ -3760,7 +3760,7 @@ var app = (function () {
     P(() => {
       !(function () {
         const e = new wt({
-          placeHolder: "Know it? Search for the title / game",
+          placeHolder: "La conosci? Cerca il titolo",
           threshold: 1,
           wrapper: !1,
           resultsList: {
@@ -3988,7 +3988,7 @@ var app = (function () {
               "class",
               "pointer-events-auto modal w-full mx-auto top-20 relative rounded-sm "
             ),
-            e[0] == "music list"
+            e[0] == "elenco canzoni"
               ? M(
                 i,
                 "style",
@@ -4109,23 +4109,14 @@ var app = (function () {
   function Nt(t) {
     let n;
     const diff =
-      Yn().diff(Yn("2026-03-26", "YYYY-MM-DD"), "days") %
+      Yn().diff(Yn(startDate, "YYYY-MM-DD"), "days") %
       musicListWithLinks.length;
     let dateBeforeBugStreak = Yn().subtract(diff, "days").format("YYYY-MM-DD");
     return {
       c() {
         (n = w("div")),
           (n.innerHTML =
-            '<p class="mb-3">A clone of <a href="https://www.heardle.app/" title="Heardle">Heardle</a>, and <a href="https://heardle-kpop.glitch.me/" title="Heardle">K-Pop Heardle</a> but for ' +
-            artist +
-            ' musics. Based on <a href="https://joywave-heardle.glitch.me/" title="Joywave Heardle">Joywave Heardle</a>.</p> \n\n<p class="mb-3">Each ' +
-            artist +
-            " Heardle is randomly chosen from " +
-            artist +
-            '\'s soundtrack.</p>' +
-            (diff > 0 ? '<p class="mb-3">If you played before ' + dateBeforeBugStreak +
-              ' and didn\'t clear your local storage, the stats "Current Streak" and "Max Streak" might be broken until you clear the local storage.</p>' : "")
-            + '<p class="mb-3">Want to make your own Heardle? Check out the <a href="https://github.com/nterrien/etrian-heardle">README</a>  </p>  \n\n\n\n <p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://github.com/">Github</a>. <a href="https://omakase.studio" title="Studio Omakase">Served omakase / お任せ</a>. '),
+            '<p class="mb-3"><b>Madame Heardle</b> \u00e8 un gioco gratuito di Mondo Madame (@mondo.madame su Instagram e TikTok). Ogni giorno una canzone di Madame da indovinare dall\'intro.</p>'+'<p class="mb-3"><b>Sito fan indipendente, non affiliato a Madame n\u00e9 a Sugar Music.</b> Nessuna pubblicit\u00e0, nessuna donazione.</p>'+'<p class="mb-3"><b>Musica.</b> Questo sito non ospita file audio: brani e copertine sono mostrati dal lettore di SoundCloud, dal profilo ufficiale dell\'artista. Tutti i diritti restano dei rispettivi titolari. Per segnalazioni o richieste di rimozione: <a href="mailto:mondomadame@gmail.com">mondomadame@gmail.com</a>.</p>'+'<p class="mb-3"><b>Privacy.</b> Nessuna iscrizione e nessuno strumento di tracciamento. Punteggi, serie e la scelta di attivare il lettore restano salvati solo nel tuo browser e non vengono inviati a nessuno. Il lettore di <a href="https://soundcloud.com/pages/privacy" target="_blank" rel="noopener">SoundCloud</a> \u00e8 un servizio esterno che pu\u00f2 usare cookie: viene caricato solo dopo il tuo clic su \u201cGioca\u201d. Il sito \u00e8 ospitato su <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Pages</a>, che come ogni servizio di hosting registra dati tecnici come l\'indirizzo IP. Per cancellare tutto basta eliminare i dati del sito dal browser.</p>'+'<p class="text-xs mb-3 text-custom-line">Codice basato su <a href="https://github.com/nterrien/etrian-heardle">etrian-heardle</a> di nterrien, a sua volta ispirato a Heardle. Realizzato con SoundCloud, Svelte, Tailwind, IconSVG, momentjs e autoComplete.js.</p>'),
           M(n, "class", "text");
       },
       m(e, t) {
@@ -4388,7 +4379,7 @@ var app = (function () {
           (n = w("p")),
             (s = w("p")),
             (n.innerHTML =
-              'Have questions/run into bugs? DM Beignet0 on Reddit, beignetSan on Twitch, @beignet0.bsky.social on Bluesky, beignet1139 on Discord or create an issue in <a href="https://github.com/nterrien/etrian-heardle/issues" target="_blank">Github</a>!<br><br>Don\'t want to wait until tomorrow? You can also play infinitely to <a href="https://nterrien.github.io/etrian-infinite-heardle/" title="Etrian Odyssey Infinite Heardle">Etrian Odyssey Infinite Heardle</a>.'),
+              'Domande, errori o una canzone che non si sente? Scrivi a <a href="mailto:mondomadame@gmail.com">mondomadame@gmail.com</a> oppure a @mondo.madame su Instagram e TikTok.'),
             (r = x()),
             (s = w("p")),
             (i = x()),
@@ -4567,7 +4558,7 @@ var app = (function () {
             (f = w("div")),
             (m = w("div")),
             (k = w("div")),
-            (k.textContent = "Next " + artist + " song in:"),
+            (k.textContent = "Prossima canzone tra:"),
             (b = x()),
             Q(S.$$.fragment),
             (D = x()),
@@ -4790,9 +4781,9 @@ var app = (function () {
       s = (e[0].length * e[1].attemptInterval) / 1e3 + "";
     return {
       c() {
-        (t = _("You got today's " + artist + " Heardle within the first ")),
+        (t = _("Hai indovinato il " + artist + " Heardle di oggi nei primi ")),
           (n = _(s)),
-          (r = _(" seconds."));
+          (r = _(" secondi."));
       },
       m(e, s) {
         g(e, t, s), g(e, n, s), g(e, r, s);
@@ -4815,12 +4806,12 @@ var app = (function () {
       s,
       i,
       o = e[1].attemptIntervalAlt[e[0].length - 1] / 1e3 + "",
-      a = e[1].attemptIntervalAlt[e[0].length - 1] / 1e3 > 1 ? "s" : "";
+      a = e[1].attemptIntervalAlt[e[0].length - 1] / 1e3 > 1 ? "i" : "o";
     return {
       c() {
-        (t = _("You got today's " + artist + " Heardle within ")),
+        (t = _("Hai indovinato il " + artist + " Heardle di oggi in ")),
           (n = _(o)),
-          (r = _("\n                second")),
+          (r = _(" second")),
           (s = _(a)),
           (i = _("."));
       },
@@ -4850,9 +4841,9 @@ var app = (function () {
     return {
       c() {
         n = _(
-          "You didn't get today's " +
+          "Non hai indovinato il " +
           artist +
-          " Heardle. Better luck tomorrow! 💎"
+          " Heardle di oggi. Riprova domani!"
         );
       },
       m(e, t) {
@@ -4870,7 +4861,7 @@ var app = (function () {
     return {
       c() {
         (t = w("div")),
-          (t.textContent = "Copied to clipboard!"),
+          (t.textContent = "Copiato negli appunti!"),
           M(
             t,
             "class",
@@ -4890,7 +4881,7 @@ var app = (function () {
     let t, n, r, s, i, o, a;
     return {
       c() {
-        (t = _("Share\n                ")),
+        (t = _("Condividi\n                ")),
           (n = k("svg")),
           (r = k("circle")),
           (s = k("circle")),
@@ -5020,15 +5011,13 @@ var app = (function () {
             e +
             "\n\n" +
             (a
-              ? "Got today's " +
-              artist +
-              " Heardle within " +
+              ? "Indovinato in " +
               seconds +
               " second" +
-              (seconds > 1 ? "s" : "")
-              : "Failed today's " + artist + " Heardle") +
+              (seconds > 1 ? "i" : "o")
+              : "Oggi non l'ho indovinato") +
             "\n\n" +
-            t + "\n\nhttps://nterrien.github.io/etrian-heardle/";
+            t + "\n\nhttps://mondomadame.github.io/heardle/";
           if (
             !navigator.share ||
             !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -5085,7 +5074,7 @@ var app = (function () {
     let t;
     return {
       c() {
-        t = _("Play");
+        t = _("Gioca");
       },
       m(e, n) {
         g(e, t, n);
@@ -5116,21 +5105,21 @@ var app = (function () {
           (t = w("div")),
             (n = w("div")),
             (n.innerHTML =
-              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><circle cx="5.5" cy="17.5" r="2.5"></circle><circle cx="17.5" cy="15.5" r="2.5"></circle><path d="M8 17V5l12-2v12"></path></svg></div> \n        <div><p>Listen to the intro, then find the correct ' +
+              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><circle cx="5.5" cy="17.5" r="2.5"></circle><circle cx="17.5" cy="15.5" r="2.5"></circle><path d="M8 17V5l12-2v12"></path></svg></div> \n        <div><p>Ascolta l\'intro e trova nell\'elenco la canzone di ' +
               artist +
-              " song in the list.</p></div>"),
+              ".</p></div>"),
             (r = x()),
             (s = w("div")),
             (s.innerHTML =
-              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg></div> \n        <div><p>Skipped or incorrect attempts unlock more of the\n                intro</p></div>'),
+              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg></div> \n        <div><p>Ogni tentativo saltato o sbagliato sblocca un pezzetto in pi\u00f9 dell\'intro.</p></div>'),
             (i = x()),
             (o = w("div")),
             (o.innerHTML =
-              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-7"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg></div> \n        <div><p>Answer in as few tries  as possible and share\n                your score!</p></div>'),
+              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-7"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg></div> \n        <div><p>Indovina con meno tentativi possibile e condividi il tuo risultato!</p></div>'),
             (a = x()),
             (z = w("div")),
             (z.innerHTML =
-              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M 2.324219 3.484375 C 1.039062 3.484375 0 4.523438 0 5.804688 C 0 7.089844 1.039062 8.128906 2.324219 8.128906 C 3.605469 8.128906 4.644531 7.089844 4.644531 5.804688 C 4.644531 4.523438 3.605469 3.484375 2.324219 3.484375 Z M 2.324219 9.675781 C 1.039062 9.675781 0 10.71875 0 12 C 0 13.28125 1.039062 14.324219 2.324219 14.324219 C 3.605469 14.324219 4.644531 13.28125 4.644531 12 C 4.644531 10.71875 3.605469 9.675781 2.324219 9.675781 Z M 2.324219 15.871094 C 1.039062 15.871094 0 16.910156 0 18.195312 C 0 19.476562 1.039062 20.515625 2.324219 20.515625 C 3.605469 20.515625 4.644531 19.476562 4.644531 18.195312 C 4.644531 16.910156 3.605469 15.871094 2.324219 15.871094 Z M 7.742188 7.355469 L 22.453125 7.355469 C 23.308594 7.355469 24 6.660156 24 5.804688 C 24 4.949219 23.308594 4.257812 22.453125 4.257812 L 7.742188 4.257812 C 6.886719 4.257812 6.195312 4.949219 6.195312 5.804688 C 6.195312 6.660156 6.886719 7.355469 7.742188 7.355469 Z M 22.453125 10.453125 L 7.742188 10.453125 C 6.886719 10.453125 6.195312 11.144531 6.195312 12 C 6.195312 12.855469 6.886719 13.546875 7.742188 13.546875 L 22.453125 13.546875 C 23.308594 13.546875 24 12.855469 24 12 C 24 11.144531 23.308594 10.453125 22.453125 10.453125 Z M 22.453125 16.644531 L 7.742188 16.644531 C 6.886719 16.644531 6.195312 17.339844 6.195312 18.195312 C 6.195312 19.050781 6.886719 19.742188 7.742188 19.742188 L 22.453125 19.742188 C 23.308594 19.742188 24 19.050781 24 18.195312 C 24 17.339844 23.308594 16.644531 22.453125 16.644531 Z M 22.453125 16.644531 "></path></svg></div> \n        <div><p>You can use the top right button\n                to see the list of tracks</p></div>'),
+              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M 2.324219 3.484375 C 1.039062 3.484375 0 4.523438 0 5.804688 C 0 7.089844 1.039062 8.128906 2.324219 8.128906 C 3.605469 8.128906 4.644531 7.089844 4.644531 5.804688 C 4.644531 4.523438 3.605469 3.484375 2.324219 3.484375 Z M 2.324219 9.675781 C 1.039062 9.675781 0 10.71875 0 12 C 0 13.28125 1.039062 14.324219 2.324219 14.324219 C 3.605469 14.324219 4.644531 13.28125 4.644531 12 C 4.644531 10.71875 3.605469 9.675781 2.324219 9.675781 Z M 2.324219 15.871094 C 1.039062 15.871094 0 16.910156 0 18.195312 C 0 19.476562 1.039062 20.515625 2.324219 20.515625 C 3.605469 20.515625 4.644531 19.476562 4.644531 18.195312 C 4.644531 16.910156 3.605469 15.871094 2.324219 15.871094 Z M 7.742188 7.355469 L 22.453125 7.355469 C 23.308594 7.355469 24 6.660156 24 5.804688 C 24 4.949219 23.308594 4.257812 22.453125 4.257812 L 7.742188 4.257812 C 6.886719 4.257812 6.195312 4.949219 6.195312 5.804688 C 6.195312 6.660156 6.886719 7.355469 7.742188 7.355469 Z M 22.453125 10.453125 L 7.742188 10.453125 C 6.886719 10.453125 6.195312 11.144531 6.195312 12 C 6.195312 12.855469 6.886719 13.546875 7.742188 13.546875 L 22.453125 13.546875 C 23.308594 13.546875 24 12.855469 24 12 C 24 11.144531 23.308594 10.453125 22.453125 10.453125 Z M 22.453125 16.644531 L 7.742188 16.644531 C 6.886719 16.644531 6.195312 17.339844 6.195312 18.195312 C 6.195312 19.050781 6.886719 19.742188 7.742188 19.742188 L 22.453125 19.742188 C 23.308594 19.742188 24 19.050781 24 18.195312 C 24 17.339844 23.308594 16.644531 22.453125 16.644531 Z M 22.453125 16.644531 "></path></svg></div> \n        <div><p>Con il pulsante in alto a destra puoi vedere l\'elenco delle canzoni. Gioca sempre dallo stesso browser per non perdere la tua serie.</p></div>'),
             (v = x()),
             (l = w("div")),
             Q(u.$$.fragment),
@@ -5196,7 +5185,7 @@ var app = (function () {
     return {
       c() {
         (n = w("div")),
-          (n.textContent = "Play daily to see your stats"),
+          (n.textContent = "Gioca ogni giorno per vedere le tue statistiche"),
           M(n, "class", "text-center py-3 text-custom-line font-semibold");
       },
       m(e, t) {
@@ -5264,14 +5253,14 @@ var app = (function () {
           (o = _(e[6])),
           (a = x()),
           (l = w("div")),
-          (l.textContent = "Played"),
+          (l.textContent = "Giocate"),
           (u = x()),
           (c = w("div")),
           (d = w("div")),
           (h = _(e[8])),
           (f = x()),
           (m = w("div")),
-          (m.textContent = "Won"),
+          (m.textContent = "Vinte"),
           (k = x()),
           (b = w("div")),
           (S = w("div")),
@@ -5279,7 +5268,7 @@ var app = (function () {
           (T = _("%")),
           (Y = x()),
           (C = w("div")),
-          (C.textContent = "Win rate"),
+          (C.textContent = "% vittorie"),
           (O = x()),
           (P = w("div")),
           (A = w("div")),
@@ -5287,14 +5276,14 @@ var app = (function () {
           (N = _(z)),
           (H = x()),
           (I = w("div")),
-          (I.textContent = "Current Streak"),
+          (I.textContent = "Serie attuale"),
           (W = x()),
           (R = w("div")),
           (F = w("div")),
           (G = _(U)),
           (E = x()),
           (j = w("div")),
-          (j.textContent = "Max Streak"),
+          (j.textContent = "Serie record"),
           M(t, "class", "flex justify-between py-3"),
           M(i, "class", "text-xl font-semibold"),
           M(l, "class", "text-custom-line text-sm "),
@@ -10056,7 +10045,7 @@ var app = (function () {
       return shuffle(u, t)[t % l];
     }
     null == localStorage.getItem("firstTime") &&
-      (_("help", "how to play"), localStorage.setItem("firstTime", "false"));
+      (_("help", "come si gioca"), localStorage.setItem("firstTime", "false"));
     return [
       i,
       o,

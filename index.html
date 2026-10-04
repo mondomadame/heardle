@@ -1,61 +1,93 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Etrian Odyssey Heardle</title>
+    <title>Madame Heardle</title>
     <meta
       name="description"
-      content="Guess the Etrian Odyssey song from the intro in as little tries as possible."
+      content="Indovina la canzone di Madame dall'intro, con meno tentativi possibile. Gioco fan non ufficiale di Mondo Madame."
     />
-    <meta itemprop="name" content="Etrian Odyssey Heardle" />
-    <meta
-      itemprop="description"
-      content="Guess the Etrian Odyssey song from the intro in as little tries as possible."
-    />
-
-    <meta
-      property="og:url"
-      content="https://nterrien.github.io/etrian-heardle/index.html"
-    />
+    <meta property="og:url" content="https://mondomadame.github.io/heardle/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Etrian Odyssey Heardle" />
+    <meta property="og:title" content="Madame Heardle" />
     <meta
       property="og:description"
-      content="Guess the Etrian Odyssey song from the intro in as little tries as possible."
+      content="Indovina la canzone di Madame dall'intro, con meno tentativi possibile."
     />
-    <!-- EDIT THE content= TAGS on lines 28-36 WITH A LINK TO AN IMAGE THAT WILL SHOW UP WHEN YOU SHARE THE LINK   -->
-    <meta itemprop="image" content="./share_image.png?format=jpg&name=small" />
+    <!-- Immagine che compare quando si condivide il link -->
     <meta
       property="og:image"
-      content="./share_image.png?format=jpg&name=small"
+      content="https://mondomadame.github.io/heardle/share_image.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Madame Heardle" />
+    <meta
+      name="twitter:description"
+      content="Indovina la canzone di Madame dall'intro, con meno tentativi possibile."
     />
     <meta
       name="twitter:image"
-      content="./share_image.png?format=jpg&name=small"
+      content="https://mondomadame.github.io/heardle/share_image.png"
     />
 
     <link rel="icon" type="image/png" href="./favicon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon.png" />
-    <link rel="shortcut icon" href="./favicon.png" />
-    <!-- https://i.imgur.com/aJHaLyo.png (ºДº)-->
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Etrian Odyssey Heardle" />
-    <meta
-      name="twitter:description"
-      content="Guess the Etrian Odyssey music from the intro in as little tries as possible."
-    />
 
     <link rel="manifest" href="webmanifest.json" />
-    <link rel="stylesheet" href="global.css" />
-    <link rel="stylesheet" href="bundle.css" />
+    <!-- VERSIONE: quando cambi un file, aumenta il numero dopo ?v= qui sotto
+         (e in fondo alla pagina), cosi' i browser scaricano la versione nuova. -->
+    <link rel="stylesheet" href="global.css?v=2" />
+    <link rel="stylesheet" href="bundle.css?v=2" />
+    <style>
+      #mh-gate {
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        background: #121212;
+        color: #ffffff;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+      #mh-gate[hidden] {
+        display: none;
+      }
+      #mh-gate .mh-box {
+        max-width: 420px;
+        text-align: center;
+      }
+      #mh-gate h1 {
+        font-family: ui-serif, Georgia, serif;
+        font-size: 30px;
+        margin: 0 0 16px;
+      }
+      #mh-gate p {
+        font-size: 15px;
+        line-height: 1.5;
+        margin: 0 0 14px;
+      }
+      #mh-gate .mh-small {
+        font-size: 12px;
+        color: #888;
+      }
+      #mh-gate button {
+        font: inherit;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #ffffff;
+        background: var(--color-positive, #1d7e05);
+        border: 0;
+        border-radius: 2px;
+        padding: 12px 28px;
+        margin: 8px 0 20px;
+        cursor: pointer;
+      }
+    </style>
 
-    <script src="music-list.js"></script>
-    <script src="music-links.js"></script>
-    <script defer src="main.js"></script>
     <script>
       if (location.protocol != "file:" && location.protocol != "https:") {
         location.href =
@@ -64,4 +96,60 @@
       }
     </script>
   </head>
+  <body>
+    <div id="mh-gate" hidden>
+      <div class="mh-box">
+        <h1>Madame Heardle</h1>
+        <p>
+          Indovina la canzone di Madame dall'intro. Una canzone al giorno.
+        </p>
+        <p>
+          La musica arriva dal lettore di SoundCloud, un servizio esterno che
+          può usare cookie. Lo carichiamo solo se scegli di giocare.
+        </p>
+        <button id="mh-start" type="button">Gioca</button>
+        <p class="mh-small">
+          Sito fan indipendente, non affiliato a Madame né a Sugar Music.
+          Nessuna iscrizione, nessun tracciamento: punteggi e scelte restano
+          nel tuo browser. Contatti: mondomadame@gmail.com
+        </p>
+      </div>
+    </div>
+    <noscript>Per giocare a Madame Heardle serve JavaScript attivo.</noscript>
+
+    <script src="music-list.js?v=2"></script>
+    <script src="music-links.js?v=2"></script>
+    <script>
+      // Il gioco (e con lui il lettore SoundCloud) parte solo dopo il clic su "Gioca".
+      // La scelta viene ricordata nel browser del visitatore.
+      (function () {
+        var KEY = "mh-soundcloud-ok";
+        var gate = document.getElementById("mh-gate");
+        function ricordata() {
+          try {
+            return localStorage.getItem(KEY) === "1";
+          } catch (e) {
+            return false;
+          }
+        }
+        function avvia() {
+          gate.hidden = true;
+          var s = document.createElement("script");
+          s.src = "main.js?v=2";
+          document.body.appendChild(s);
+        }
+        if (ricordata()) {
+          avvia();
+        } else {
+          gate.hidden = false;
+          document.getElementById("mh-start").addEventListener("click", function () {
+            try {
+              localStorage.setItem(KEY, "1");
+            } catch (e) {}
+            avvia();
+          });
+        }
+      })();
+    </script>
+  </body>
 </html>

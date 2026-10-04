@@ -1,6 +1,5 @@
 {
-    "name": "Etrian Odyssey Heardle",
-    "short_name": "EtrianHeardle",
-    "description": "Guess the daily Etrian Odyssey music."
+    "name": "Madame Heardle",
+    "short_name": "MadameHeardle",
+    "description": "Indovina ogni giorno la canzone di Madame dall'intro."
 }
-  
